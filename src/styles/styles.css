@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600&family=Montserrat:wght@500&display=swap');
+
+:root {
+    /* Color Pallete */
+    --background: #0F0C0C;
+    --divider: #141414;
+    --primary-text: #F5F5FA;
+    --secundary-text: #C4C4C4;
+
+    /* Fonts */
+    --font-title: 'Gabarito', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Default styles */
+    background: var(--background);
+    color: var(--primary-text);
+    font-size: 16px;
+    font-family: var(--font-body);
+}
+
+/* General styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, textarea {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    padding: 1.25rem;
+}
