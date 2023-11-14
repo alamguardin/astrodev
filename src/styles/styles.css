@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600&family=Montserrat:wght@500&display=swap');
 @import url('sidebar.css');
+@import url('content.css');
+@import url('home.css');
 
 :root {
     /* Color Pallete */
@@ -43,6 +45,8 @@ ul {
 }
 
 main {
+    display: flex;
+    gap: 1.25rem;
     width: 100%;
     height: 100vh;
     padding: 1.25rem;
