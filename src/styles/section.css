@@ -88,3 +88,28 @@
     align-items: center;
     gap: 0.75rem;
 }
+
+.section__project {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.section__project-title {
+    position: absolute;
+    bottom: -1.25rem;
+    left: 1.25rem;
+    color: var(--primary-text);
+    transition: .2s all ease;
+}
+
+.section__project:hover .section__project-title {
+    bottom: 1.25rem;
+}
+
+.section__project-mini {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
