@@ -5,5 +5,13 @@
     height: 100%;
     border: 1px solid var(--divider);
     border-radius: 0.625rem;
-    overflow: hidden;
+    overflow-y: scroll;
 }
+
+.content section {
+    margin-top: 1.25rem;
+}
+
+.content section:first-child {
+    margin-top: 0;
+} 

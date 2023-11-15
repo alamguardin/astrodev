@@ -1,0 +1,90 @@
+.section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+.section__title {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.section__item {
+    padding: 1.25rem;
+    border: 1px solid var(--divider);
+    border-radius: 0.625rem;
+}
+
+.section__bio {
+    font-size: 1.125rem;
+    color: var(--secundary-text);
+}
+
+.section__caption {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary-text);
+    text-transform: uppercase;
+}
+
+.section__brand {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.75rem;
+    border-radius: 100%;
+    overflow: hidden;
+    background: red;
+}
+
+.section__brand img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section__legend {
+    color: var(--secundary-text);
+}
+
+.section__skills {
+    margin-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.section__skill-item {
+    padding: 1.875rem;
+    border: 1px solid var(--divider);
+    border-radius: 0.625rem;
+}
+
+.section__skill-item svg {
+    fill: var(--secundary-text);
+}
+
+.section__resume-link {
+    margin: 0.9375rem 0;
+}
+
+.section__resume-link a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-text);
+}
+
+.section__resume-link a span {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}

@@ -2,6 +2,7 @@
 @import url('sidebar.css');
 @import url('content.css');
 @import url('home.css');
+@import url('section.css');
 
 :root {
     /* Color Pallete */
