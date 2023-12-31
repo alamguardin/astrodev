@@ -10,3 +10,146 @@
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
+
+/* General Styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    max-width: 1140px;
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Display and text styles */
+/* Sizes */
+.heading-1, .heading-2, .heading-3 {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.heading-1 {
+    font-size: 3rem;
+}
+
+.heading-2 {
+    font-size: 2.25rem;
+}
+
+.heading-3 {
+    font-size: 1.5rem;
+}
+
+.text-normal, .text-small, .text-smaller {
+    font-weight: 500;
+    color: var(--white);
+}
+
+.text-normal {
+    font-size: 1rem;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-smaller {
+    font-size: 0.75rem;
+}
+
+/* Modifiers */
+
+.heading-1 > .green, .heading-2 > .green, .heading-3 .green {
+    color: var(--green);
+}
+
+.heading-1 > .violet, .heading-2 > .violet, .heading-3 .violet {
+    color: var(--violet);
+}
+
+.heading-1 > .pink, .heading-2 > .pink, .heading-3 .pink {
+    color: var(--pink);
+}
+
+/* Button Styles */
+.button {
+    padding: 0.3125rem;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 2.5rem;
+    transform: translate(2.375rem, -0.5rem);
+    transition: .2s all ease;
+    cursor: pointer;
+}
+
+.button-text {
+    margin-left: 1rem;
+}
+
+.button-box-icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: var(--white);
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.button:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+.button:hover .button-box-icon {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* Layout Styles*/
+/* Navbar */
+.navbar {
+    margin: 1.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .text-normal {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    height: calc(100vh - 8rem);
+    display: flex;
+    align-items: center;
+}
