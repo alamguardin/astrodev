@@ -147,9 +147,29 @@ img {
     text-decoration: underline;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
-    height: calc(100vh - 8rem);
+    min-height: calc(100vh - 8rem);
     display: flex;
     align-items: center;
+}
+
+/* About Section*/
+.about {
+    margin: 12.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.375rem;
+}
+
+.about-picture img {
+    border-radius: 100%;
+}
+
+.about-bio {
+    max-width: 40.625rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
