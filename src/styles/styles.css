@@ -1,0 +1,12 @@
+:root {
+    /* Pallete Colors */
+    --black: #09090B;
+    --white: #FFFFFF;
+    --green: #6EE7B7;
+    --violet: #C4B5FD;
+    --pink: #FDA4AF;
+    /* Default Styles */
+    background: var(--black);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
