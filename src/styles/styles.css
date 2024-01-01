@@ -107,7 +107,6 @@ ul {
     color: var(--white);
     border: 1px solid var(--white);
     border-radius: 2.5rem;
-    transform: translate(2.375rem, -0.5rem);
     transition: .2s all ease;
     cursor: pointer;
 }
@@ -158,6 +157,10 @@ ul {
     align-items: center;
 }
 
+.hero .button {
+    transform: translate(2.375rem, -0.5rem);
+}
+
 /* About Section*/
 .about {
     margin: 12.5rem 0;
@@ -182,7 +185,7 @@ ul {
 .projects {
     margin-top: 3.75rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem 2.5rem;
 }
 
@@ -211,4 +214,56 @@ ul {
     color: var(--white);
     border: 1px solid var(--white);
     border-radius: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    margin: 6.25rem 0;
+}
+
+/* Social Links */
+.social {
+    margin-top: 3.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Footer */
+.contact-footer {
+    margin-top: 12.5rem;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .heading-1 {
+        font-size: 2.25rem;
+    }
+
+    .heading-2 {
+        font-size: 1.5rem;
+    }
+
+    .heading-3 {
+        font-size: 1.125rem;
+    }
 }
