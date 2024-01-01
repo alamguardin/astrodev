@@ -150,6 +150,13 @@ ul {
     text-decoration: underline;
 }
 
+.navbar-logo img {
+    animation: rotate-center 1s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
 /* Hero Section */
 .hero {
     min-height: calc(100vh - 8rem);
