@@ -3,6 +3,7 @@
     --black: #09090B;
     --white: #FFFFFF;
     --green: #6EE7B7;
+    --gray: #d4d4d8;
     --violet: #C4B5FD;
     --pink: #FDA4AF;
     /* Default Styles */
@@ -12,7 +13,9 @@
 }
 
 /* General Styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,7 +35,8 @@ a {
     text-decoration: none;
 }
 
-button, input {
+button,
+input {
     font-family: 'Poppins', sans-serif;
     outline: none;
 }
@@ -47,9 +51,12 @@ ul {
 
 /* Display and text styles */
 /* Sizes */
-.heading-1, .heading-2, .heading-3 {
+.heading-1,
+.heading-2,
+.heading-3 {
     color: var(--white);
     font-weight: 600;
+    text-wrap: balance;
 }
 
 .heading-1 {
@@ -64,9 +71,11 @@ ul {
     font-size: 1.5rem;
 }
 
-.text-normal, .text-small, .text-smaller {
+.text-normal,
+.text-small,
+.text-smaller {
     font-weight: 500;
-    color: var(--white);
+    color: var(--gray);
 }
 
 .text-normal {
@@ -83,15 +92,21 @@ ul {
 
 /* Modifiers */
 
-.heading-1 > .green, .heading-2 > .green, .heading-3 .green {
+.heading-1>.green,
+.heading-2>.green,
+.heading-3 .green {
     color: var(--green);
 }
 
-.heading-1 > .violet, .heading-2 > .violet, .heading-3 .violet {
+.heading-1>.violet,
+.heading-2>.violet,
+.heading-3 .violet {
     color: var(--violet);
 }
 
-.heading-1 > .pink, .heading-2 > .pink, .heading-3 .pink {
+.heading-1>.pink,
+.heading-2>.pink,
+.heading-3 .pink {
     color: var(--pink);
 }
 
@@ -155,7 +170,15 @@ ul {
     animation-delay: 1s;
 }
 
-@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
 
 /* Hero Section */
 .hero {
@@ -252,12 +275,21 @@ ul {
 }
 
 @media screen and (max-width: 568px) {
+
+    .heading-2 {
+        text-align: center;
+    }
+
+    .text-normal {
+        text-align: center;
+    }
+
     .projects {
         grid-template-columns: 1fr;
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
     :root {
         font-size: 12px;
     }
