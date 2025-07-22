@@ -1,6 +1,8 @@
-# Astrodev: Template
+# Astrodev: Template - Status Building
 
 A template for developers made in Astro. 🧑‍🚀
+
+
 
 ```sh
 git clone https://github.com/alamguardin/astrodev.git
