@@ -1,25 +1,27 @@
 ---
-import Logo from '../assets/icon.svg'
+import Logo from "../assets/Frame.png";
 ---
 
-<header>
+<header class="hero">
     <nav class="navbar">
         <div class="navbar-brand">
             <a href="index.html" role="link" class="navbar-logo">
-                <img src={Logo.src} alt="Brand">
+                <img src={Logo.src} alt="Brand" />
             </a>
         </div>
-        <a href="#contact" class="text-normal">Contact</a>
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="#">About me</a></li>
+            <li class="navbar-item"><a href="#">Portfolio</a></li>
+            <li class="navbar-item"><a href="#">Contact</a></li>
+        </ul>
     </nav>
-    <div class="hero">
-        <h1 class="heading-1">
-            Hello, everyone! You know Juan, <span class="green">right?</span> Allow me to tell you about Juan, a passionate <span class="violet">web developer.</span> Juan transforms lines of code into true digital <span class="pink">masterpieces.</span>
-            <a href="#about" role="button" class="button">
-                <span class="button-text">Learn more</span>
-                <span class="button-box-icon">
-                    <i class="ri-arrow-down-line"></i>
-                </span>
-            </a>
+    <div class="hero-content">
+        <h1 class="hero-heading">
+            Hello, everyone! I'am Juan, a passionate web developer. I love it
+            transforms lines of code into true digital masterpieces.
         </h1>
+        <a href="#" class="hero-button">Tell me about your project</a>
     </div>
+    <div class="hero-radial-gradient"></div>
+    <div class="hero-pattern"></div>
 </header>
