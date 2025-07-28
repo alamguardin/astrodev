@@ -58,6 +58,40 @@ main {
     z-index: 10;
 }
 
+/* Navbar Styles */
+.navbar {
+    position: absolute;
+    top: 1.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.5rem;
+    background: rgba(3, 7, 18, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 3;
+}
+
+.navbar-list {
+    display: flex;
+}
+
+.navbar-item {
+    margin-right: 1rem;
+}
+
+.navbar-item a {
+    font-size: 0.875rem;
+    color: var(--secundary-text);
+    text-transform: uppercase;
+    transition: .2s all ease-in-out;
+}
+
+.navbar-item a:hover {
+    color: var(--primary-text);
+}
+
 /* Hero Section Styles */
 .hero {
     position: relative;
@@ -65,12 +99,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.navbar {
-    position: absolute;
-    top: 1.5rem;
-    z-index: 3;
 }
 
 .hero-content {
@@ -84,6 +112,7 @@ main {
     font-size: 3rem;
     color: var(--primary-text);
     font-weight: 400;
+    text-wrap: balance;
 }
 
 .hero-button {
@@ -95,6 +124,11 @@ main {
     font-size: 0.875rem;
     color: var(--button-color);
     text-transform: uppercase;
+    transition: .2s all ease-out;
+}
+
+.hero-button:hover {
+    box-shadow: 0px 0px 32px 1px var(--accent-color);
 }
 
 .hero .hero-radial-gradient {
