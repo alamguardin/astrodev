@@ -1,15 +1,63 @@
 ---
-import User from '../assets/Image.png'
+import { Image } from "astro:assets";
+import User from "../assets/Image.png";
 ---
 
 <section class="about" id="about">
-    <figure class="about-picture">
-        <img src={User.src} alt="Juan Garcia picture">
-    </figure>
-    <article class="about-bio">
-        <h2 class="heading-2">Hello, I'm Juan, a passionate web developer with over 10 years of experience in the industry.</h2>
-        <p class="text-normal">Throughout my career, I have faced and overcome various challenges that have strengthened my ability to find innovative solutions in the development world.</p>
-        <p class="text-normal">From my early days as an apprentice to leading development teams in large-scale projects, each experience has been a fundamental pillar in my professional growth. I take pride in contributing to the success of numerous projects, from e-commerce platforms to award-winning mobile applications.</p>
-        <p class="text-normal">My focus has always been on transforming ideas into digital realities, using cutting-edge technologies and agile methodologies. This passion for creation and problem-solving has led me to constantly explore new trends and stay updated in a technology landscape that is always evolving</p>
-    </article>
+    <div class="about-left-section">
+        <div class="about-image">
+            <div class="about-social">
+                <a href="#"><i class="ri-github-fill"></i></a>
+            </div>
+            <div class="about-social">
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </div>
+            <div class="about-social">
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+            </div>
+            <figure class="about-picture">
+                <Image src={User} alt="Juan Garcia" loading="eager" />
+            </figure>
+        </div>
+        <div class="about-tags">
+            <span class="about-tag">#frontend</span>
+            <span class="about-tag">#ui/ux</span>
+            <span class="about-tag">#performance</span>
+            <span class="about-tag">#accessibility</span>
+            <span class="about-tag">#responsive-design</span>
+        </div>
+        <div class="about-attributes">
+            <div class="about-attribute">
+                <h3 class="about-attribute-amount">+24</h3>
+                <p class="about-attribute-description">Completed Projects</p>
+            </div>
+            <div class="about-attribute">
+                <h3 class="about-attribute-amount">+10</h3>
+                <p class="about-attribute-description">Years Of Projects</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-right-section">
+        <article class="about-bio">
+            <p class="about-body">
+                Throughout my career, I have faced and overcome various
+                challenges that have strengthened my ability to find innovative
+                solutions in the development world.
+            </p>
+            <p class="about-body">
+                From my early days as an apprentice to leading development teams
+                in large-scale projects, each experience has been a fundamental
+                pillar in my professional growth. I take pride in contributing
+                to the success of numerous projects, from e-commerce platforms
+                to award-winning mobile applications.
+            </p>
+            <p class="about-body">
+                My focus has always been on transforming ideas into digital
+                realities, using cutting-edge technologies and agile
+                methodologies. This passion for creation and problem-solving has
+                led me to constantly explore new trends and stay updated in a
+                technology landscape that is always evolving
+            </p>
+        </article>
+    </div>
 </section>
