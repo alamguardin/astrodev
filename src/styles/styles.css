@@ -155,7 +155,7 @@ main {
     z-index: 0;
 }
 
-/* About Section styles */
+/* About Section styles  */
 .about {
     min-height: 600px;
     border-top: 1px solid var(--line-color);
@@ -165,7 +165,9 @@ main {
 }
 
 .about-left-section,
-.about-right-section {
+.about-right-section,
+.portfolio-left-section,
+.portfolio-right-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -308,4 +310,94 @@ main {
 
 .about-body:first-child {
     color: var(--primary-text);
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    min-height: 28.125rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.portfolio-heading {
+    max-width: 450px;
+    font-size: 2.25rem;
+    color: var(--primary-text);
+    font-weight: 400;
+    text-wrap: balance;
+}
+
+.portfolio-left-section {
+    border-right: 1px solid var(--line-color);
+}
+
+.portfolio-btn-left,
+.portfolio-btn-right {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid var(--accent-color);
+    background: var(--backgorund-color);
+    color: var(--secundary-text);
+    font-size: 1.5rem;
+    transition: .2s all ease;
+    cursor: pointer;
+}
+
+.portfolio-btn-left:hover,
+.portfolio-btn-right:hover {
+    color: var(--primary-text);
+}
+
+.portfolio-cards {
+    position: relative;
+    margin: 0px 3.875rem;
+    width: 16.25rem;
+    height: 18.125rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card {
+    position: absolute;
+    width: 250px;
+    border: 1px solid var(--line-color);
+    border-radius: 0.5rem;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-content {
+    padding: 1.125rem;
+}
+
+.card-heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card-heading a {
+    color: var(--primary-text);
+}
+
+.card-skills {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--secundary-text)
+}
+
+.card.active {
+    z-index: 10;
+    transform: translateZ(0);
+}
+
+.card.hidden {
+    opacity: 0;
 }
