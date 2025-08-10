@@ -1,40 +1,52 @@
 <section class="contact" id="contact">
-    <h2 class="heading-2">If you have a great <span class="violet">idea</span> or an exciting <span class="green">project,</span> feel free to get in touch with me!</h2>
-    <ul class="social">
-        <li>
-            <a href="#" role="button" class="button">
-                <span class="button-text">Email</span>
-                <span class="button-box-icon">
-                    <i class="ri-mail-fill"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="#" role="button" class="button">
-                <span class="button-text">Twitter</span>
-                <span class="button-box-icon">
-                    <i class="ri-twitter-fill"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="#" role="button" class="button">
-                <span class="button-text">Linkedin</span>
-                <span class="button-box-icon">
-                    <i class="ri-linkedin-fill"></i>
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="#" role="button" class="button">
-                <span class="button-text">Github</span>
-                <span class="button-box-icon">
-                    <i class="ri-github-fill"></i>
-                </span>
-            </a>
-        </li>
-    </ul>
+    <h2 class="contact-heading">Let's collaborate.</h2>
+    <p class="contact-body">
+        If you have a great idea or an exciting project, don't hesitate to
+        contact me!
+    </p>
+    <form action="" class="contact-form">
+        <div class="contact-form-section">
+            <label for="fullname" class="contact-form-label">Full Name</label>
+            <input
+                class="contact-form-input"
+                type="text"
+                name="fullname"
+                id="fullname"
+                placeholder="e.j Jhon Doe"
+            />
+        </div>
+        <div class="contact-form-section">
+            <label for="email" class="contact-form-label">Email</label>
+            <input
+                class="contact-form-input"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="e.j e.j example@mail.com"
+            />
+        </div>
+        <div class="contact-form-section">
+            <label for="message" class="contact-form-label">Full Name</label>
+            <textarea
+                class="contact-form-input"
+                name="message"
+                id="message"
+                placeholder="e.j Hi there!..."></textarea>
+        </div>
+        <button type="submit" class="contact-form-btn">Send Message</button>
+    </form>
     <footer class="contact-footer">
-        <p class="text-normal">© 2023 Juan García. All rights reserved.</p>
+        <p class="contact-copy">© 2023 Juan García. All rights reserved.</p>
+        <ul class="contact-social">
+            <li class="contact-link">
+                <a href="#"><i class="ri-github-fill"></i></a>
+            </li>
+            <li class="contact-link">
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+            <li class="contact-link">
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+            </li>
+        </ul>
     </footer>
 </section>

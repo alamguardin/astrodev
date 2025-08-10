@@ -1,56 +1,104 @@
 ---
-import Work1 from '../assets/work-1.png'
-import Work2 from '../assets/work-2.png'
-import Work3 from '../assets/work-3.png'
-import Work4 from '../assets/work-4.png'
+import Work1 from "../assets/work-1.png";
+import Work2 from "../assets/work-2.png";
+import Work3 from "../assets/work-3.png";
+import Work4 from "../assets/work-4.png";
 ---
 
-<section>
-    <h2 class="heading-1">Take a look at these digital gems and <span class="green">discover</span> how I turn <span class="pink">ideas</span> into <span class="violet">realities.</span></h2>
-    <ul class="projects">
-        <li class="card">
-            <figure class="card-picture">
-                <img src={Work1.src} alt="Anything project">
-            </figure>
-            <h3 class="heading-3"><a href="#">Newspaper app</a></h3>
-            <ul class="card-skills">
-                <li class="card-tag">React</li>
-                <li class="card-tag">Nest.js</li>
-                <li class="card-tag">MySql</li>
-            </ul>
-        </li>
-        <li class="card">
-            <figure class="card-picture">
-                <img src={Work2.src} alt="Anything project">
-            </figure>
-            <h3 class="heading-3"><a href="#">Mechanical keyboard</a></h3>
-            <ul class="card-skills">
-                <li class="card-tag">React</li>
-                <li class="card-tag">Nest.js</li>
-                <li class="card-tag">MySql</li>
-            </ul>
-        </li>
-        <li class="card">
-            <figure class="card-picture">
-                <img src={Work3.src} alt="Anything project">
-            </figure>
-            <h3 class="heading-3"><a href="#">Email app</a></h3>
-            <ul class="card-skills">
-                <li class="card-tag">React</li>
-                <li class="card-tag">Nest.js</li>
-                <li class="card-tag">MySql</li>
-            </ul>
-        </li>
-        <li class="card">
-            <figure class="card-picture">
-                <img src={Work4.src} alt="Anything project">
-            </figure>
-            <h3 class="heading-3"><a href="#">Delivery app</a></h3>
-            <ul class="card-skills">
-                <li class="card-tag">React</li>
-                <li class="card-tag">Nest.js</li>
-                <li class="card-tag">MySql</li>
-            </ul>
-        </li>
-    </ul>
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-left-section">
+        <h2 class="portfolio-heading">
+            Take a look at these digital gems and discover how I turn ideas into
+            realities.
+        </h2>
+    </div>
+    <div class="portfolio-right-section">
+        <button class="portfolio-btn-left">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <ul class="portfolio-cards">
+            <li class="card">
+                <figure class="card-picture">
+                    <img src={Work1.src} alt="Anything project" />
+                </figure>
+                <div class="card-content">
+                    <h3 class="card-heading"><a href="#">Newspaper app</a></h3>
+                    <p class="card-skills">React, Nest.js, MySQL</p>
+                </div>
+            </li>
+            <li class="card">
+                <figure class="card-picture">
+                    <img src={Work2.src} alt="Anything project" />
+                </figure>
+                <div class="card-content">
+                    <h3 class="card-heading"><a href="#">Keyboard Site</a></h3>
+                    <p class="card-skills">Astro, Tailwind, GSAP</p>
+                </div>
+            </li>
+            <li class="card">
+                <figure class="card-picture">
+                    <img src={Work3.src} alt="Anything project" />
+                </figure>
+                <div class="card-content">
+                    <h3 class="card-heading"><a href="#">Email Service</a></h3>
+                    <p class="card-skills">Express, Node, PostgreSQL</p>
+                </div>
+            </li>
+            <li class="card">
+                <figure class="card-picture">
+                    <img src={Work4.src} alt="Anything project" />
+                </figure>
+                <div class="card-content">
+                    <h3 class="card-heading"><a href="#">Travel App</a></h3>
+                    <p class="card-skills">Flutter, Supabase</p>
+                </div>
+            </li>
+        </ul>
+        <button class="portfolio-btn-right">
+            <i class="ri-arrow-right-s-line"></i>
+        </button>
+    </div>
 </section>
+
+<script>
+    const cards = document.querySelectorAll(".card");
+    const leftArrow = document.querySelector(".portfolio-btn-left");
+    const rightArrow = document.querySelector(".portfolio-btn-right");
+    let currentIndex = 0;
+    let isAnimating = false;
+
+    function updateCarousel(newIndex) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        currentIndex = (newIndex + cards.length) % cards.length;
+
+        cards.forEach((card, i) => {
+            const offset = (i - currentIndex + cards.length) % cards.length;
+
+            card.classList.remove("active", "hidden");
+
+            if (offset === 0) {
+                card.classList.add("active");
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+
+        setTimeout(() => {
+            isAnimating = false;
+        }, 800);
+    }
+
+    console.log(rightArrow);
+
+    leftArrow.addEventListener("click", () => {
+        updateCarousel(currentIndex - 1);
+    });
+
+    rightArrow.addEventListener("click", () => {
+        updateCarousel(currentIndex + 1);
+    });
+
+    updateCarousel(0);
+</script>
