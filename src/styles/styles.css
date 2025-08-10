@@ -323,6 +323,7 @@ main {
 
 .portfolio-heading {
     max-width: 450px;
+    width: 90%;
     font-size: 2.25rem;
     color: var(--primary-text);
     font-weight: 400;
@@ -369,7 +370,7 @@ main {
 
 .card {
     position: absolute;
-    width: 250px;
+    width: 100%;
     border: 1px solid var(--line-color);
     border-radius: 0.5rem;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -512,4 +513,79 @@ textarea.contact-form-input {
 
 .contact-social a:hover {
     color: var(--primary-text);
+}
+
+/* Media Queries */
+@media (max-width: 1080px) {
+    :root {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .portfolio-cards {
+        margin: 0px 2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-left-section {
+        border: none;
+        border-bottom: 1px solid var(--line-color);
+        padding: 3rem 0px;
+    }
+
+    .about-bio {
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-left-section {
+        border: none;
+        border-bottom: 1px solid var(--line-color);
+    }
+
+    .portfolio-heading,
+    .contact-heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .contact-body {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-heading {
+        font-size: 2.25rem;
+    }
+
+    .portfolio-btn-left,
+    .portfolio-btn-right {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .portfolio-cards {
+        margin: 0px 1.5rem;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .contact-footer {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
 }
