@@ -2,6 +2,7 @@
 
 A template for developers made in Astro. 🧑‍🚀
 
+![preview](/src/assets/astrodev-thumbnail.png)
 
 
 ```sh
